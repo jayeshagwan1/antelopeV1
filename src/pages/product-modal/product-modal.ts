@@ -5,7 +5,7 @@ import { MenuService } from '../../services/menu.service';
 //Models
 import { Product } from '../../models/menu.model'
 
-@IonicPage()
+// @IonicPage()
 @Component({
   selector: 'page-product-modal',
   templateUrl: 'product-modal.html',

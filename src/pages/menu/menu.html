@@ -7,10 +7,11 @@
 <ion-content class="body">
   <div class="headerContainer">
     <div class="titleContainer">
-      <h3>Faites votre choix...</h3>
+      <h3>
+        Make your choice...</h3>
       <div class="cart">
         <ion-icon name="basket"></ion-icon>
-        <h4>{{total || 0}}€</h4>
+        <h4>{{total || 0}}₹</h4>
       </div>
     </div>
 </div>
@@ -28,7 +29,7 @@
           <img src="{{product.img}}">
         </ion-thumbnail>
         <h3 class="name" (click)="_productModal(catId, productId)">{{product.name}}</h3>
-        <p>{{product.price}}€</p>
+        <p>{{product.price}}₹</p>
         <div clear item-end>
           <button class="counterButton" (click)="_addToCart(catId, productId)">+</button>
             <span class="counter">{{product.quantity || 0}}</span>
@@ -38,12 +39,12 @@
     </ion-list>
     </ion-list-header>
 </ion-list>
+</ion-content>
 <div class="orderContainer">
   <div class="orderButtonContainer">
     <button ion-button [color]="total && total > 0 ? 'default' : 'light'" text-center (click)="_onOrder()">
-      Panier ({{cart.length || 0}} items)
+      Basket ({{cart.length || 0}} items)
       </button>
   </div>
 </div>
-</ion-content>
 

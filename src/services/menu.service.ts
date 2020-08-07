@@ -11,7 +11,7 @@ export class MenuService {
     }
     
     public getMenu = (resto) => {
-        return this.http.get(`../assets/${resto}.json`)
+        return this.http.get(`../assets/₹{resto}.json`)
         .toPromise()
         .then(res => res.json())
         .catch(error => console.log(error));
